@@ -1,6 +1,5 @@
 from deepdraughts.gui import GUI
 
-
 def main():
     """
     Czlek vs czlek
