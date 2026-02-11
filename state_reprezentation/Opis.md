@@ -1,20 +1,16 @@
-Nasz tensor ma kształt (10, 8, 8):
+Zwraca tensor (6, 4, 8):
 
 10 = liczba kanałów (warstw informacji)
 8×8 = rozmiar planszy
 
 Każdy kanał to osobna "warstwa" informacji:
 ```aiignore
-Kanał 0: Gdzie są BIAŁE PIONKI (1.0 = jest pionek, 0.0 = nie ma)
-Kanał 1: Gdzie są BIAŁE DAMKI
-Kanał 2: Gdzie są CZARNE PIONKI
-Kanał 3: Gdzie są CZARNE DAMKI
-Kanał 4: Które pola są DOSTĘPNE (ciemne pola, na których można grać)
-Kanał 5: Z których pól można WYKONAĆ RUCH
-Kanał 6: Z których pól można wykonać BICIE
-Kanał 7: CZYJ RUCH (1.0 = białe, 0.0 = czarne)
-Kanał 8: BILANS MATERIAŁU (różnica liczby pionków)
-Kanał 9: FAZA GRY (jak daleko jesteśmy w grze)
+Kanał 0: Moje pionki
+Kanał 1: Moje damki
+Kanał 2: Przeciwnika pionki
+Kanał 3: Przeciwnika damki
+Kanał 4: Możliwe ruchy (0=nie, 1=ruch, 2=bicie)
+Kanał 5: Możliwe cele ruchów (gdzie mogę pójść)
 ```
 
 Uzycie:
